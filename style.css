@@ -22,6 +22,9 @@ header{
     z-index: 1;
 }
 
+.menu{
+    text-align: right;
+}
 
 header ul li{
     font-family: "century";
@@ -135,6 +138,7 @@ a{
 .portfolio{
     width: 100%;
     margin-top: 19%;
+    margin-bottom: 40%;
   }
   
 .skills {
@@ -196,4 +200,18 @@ u{
 }
 li{
     margin-bottom: 3%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+    display: flexbox;
+    z-index: 0;
+    position: fixed;
+    bottom: 0;
+    padding-top: .3%;
+    padding-bottom: .3%;
+    font-weight: bolder;
+    color: rgb(59, 59, 59);
 }
