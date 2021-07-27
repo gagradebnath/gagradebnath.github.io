@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            line-height: 200%;
+        }
+        input{
+            background-color: aliceblue;
+            border-radius: 10px;
+            border-color: rgb(255, 174, 0);
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 40%;
+        }
+        body{
+            background-image: url(5672321.jpg);
+            background-size:cover;
+            background-position: right top;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function ref(){
+            var reference = window.location.search.substr(1);
+            var p = reference.split('=');
+            document.forms["reg"]["ref"].value = decodeURIComponent(p[1]);
+        }
+
+    </script>
+</head>
+<body onload="ref()">
+        <div style="text-align: center;">
+            <p style="background-color:rgba(252, 255, 59, 0.863); text-align: center; padding: 3%; border-radius: 20px; font-size: 200%;">
+                Registration Form
+            </p>
+            <div style="background-color:rgba(252, 255, 59, 0.863); text-align: center; padding: 5%; margin: 10%;margin-top: 0%; border-radius: 20px;">
+                
+                <form name="reg" action="action.html" method="get">
+
+                    <label for="name">Name/নাম:</label>
+                    <br>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+
+                    <label for="email">Email/ইমেইল:</label>
+                    <br>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+
+                    <label for="Phone Number">Phone Number/ ফোন নম্বর:</label>
+                    <br>
+                    <input type="text" id="Phone Number" name="phone" required>
+                    <br>
+
+                    <label>payment method / পেমেন্টের মাধ্যম:</label><br>
+                    <input list="pay" name="pay" style="width: auto; text-align: center;" value="bkash" required>
+                        <datalist id="pay" style="width: fit-content;">
+                            <option  name="pay" value="bkash">
+                            <option  name="pay" value="rocket">
+                            <option  name="pay" value="nagad"></option>
+                        </datalist>
+                    <br>
+                    <label for="Phone Number">Bkash Number/ নম্বর:</label>
+                    <br>
+                    <input type="text" id="Phone Number" name="phone" required>
+                    <br>
+                    <label for="Phone Number">transaction ID</label>
+                    <br>
+                    <input type="text" id="Phone Number" name="phone" required>
+                    <br>
+                    <input type="text" id="ref" name="ref" style="display:none;">
+                    <input type="text" name="submit" value="SUBMIT" style="display: none;">
+                    <br>
+                    <input type="submit" style="width: auto;">
+                </form>
+
+            </div>
+        </div>
+</body>
+</html>
