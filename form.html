@@ -2,93 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        label{
-            line-height: 200%;
-        }
-        input{
-            background-color: aliceblue;
-            border-radius: 10px;
-            border-color: rgb(255, 174, 0);
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 70%;
-            max-width: 400px;
-            height: 20px;
-        }
-        body{
-            background-image: url(5672321.jpg);
-            background-size:cover;
-            background-position: right top;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript">
         function ref(){
             var reference = window.location.search.substr(1);
-            var p = reference.split('=');
-            document.forms["reg"]["ref"].value = decodeURIComponent(p[1]);
+            document.forms["reg"]["ref"].value = decodeURIComponent(reference);
+            console.log(decodeURIComponent(decodeURIComponent(reference)))
+            if(decodeURIComponent(reference).length>0 && decodeURIComponent(reference)!="undefined"){
+                document.getElementById("taka").innerHTML="990 Taka";
+            }
         }
 
     </script>
 </head>
 <body onload="ref()">
-        <div style="text-align: center;">
-            <P style="background-color:rgba(252, 255, 59, 0.863); text-align: center; padding: 3%; border-radius: 20px;">
-            <span  style="font-size: 170%;">
-                REGISTRATION FORM
-            </SPAN>
-            </p>
-            <div style="background-color:rgba(252, 255, 59, 0.863); text-align: center; padding: 5%; margin: 10%;margin-top: 0%; border-radius: 20px;">
-                
-                <form name="reg" action="submit.html" method="get">
 
-                    <label for="name">Name/নাম:</label>
-                    <br>
-                    <input type="text" id="name" name="entry.1847400945" required>
-                    <br>
+    <div class="main">
 
-                    <label for="email">Email/ইমেইল:</label>
-                    <br>
-                    <input type="email" id="email" name="entry.707462197" required>
-                    <br>
-
-                    <label for="Phone Number">Phone Number/ ফোন নম্বর:</label>
-                    <br>
-                    <input type="text" id="Phone Number" name="entry.535897837" required>
-                    <br>
-
-                    <label>payment method / পেমেন্টের মাধ্যম:</label><br>
-                    <input list="pay" name="entry.1622645445" style="width: auto; text-align: center;" value="bkash" required>
-                        <datalist id="pay" style="width: fit-content;">
-                            <option   value="bkash">
-                            <option   value="rocket">
-                            <option   value="nagad"></option>
-                        </datalist>
-                    <br>
-                    <label for="Phone Number">Bkash Number/ নম্বর:</label>
-                    <br>
-                    <input type="text" id="Phone Number" name="entry.57688165" required>
-                    <br>
-                    <label for="Phone Number">transaction ID</label>
-                    <br>
-                    <input type="text" id="Phone Number" name="entry.542013681" required>
-                    <br>
-                    <input type="text" id="ref" name="entry.187579107" style="display:none;">
-                    <input type="text" name="submit" value="SUBMIT" style="display: none;">
-                    <br>
-                    <input type="submit" style="width: 10%; min-width: 80px;">
-                </form>
-
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                      <table style="display:flexbox;border-collapse: collapse; background-color: transparent; width: fit-content; background-color: rgb(212, 87, 87);color: white;">
+                          <tr>
+                              <td style="padding-left:20px;">Payment Due :</td>
+                              <td style="padding-right:20px; padding-left:20px;"id="taka"> 2000 Taka</td>
+                          </tr>
+                      </table>
+                      <br>
+                      <p>
+                        Send Money To <span style=" font-weight: 400; background-color: rgb(207, 67, 67); color: white; padding-right:5px; padding-left:5px;">01400450272</span> Bkash/Nagad/Rocket (personal)
+                      </p>
+                       
+                    </div>
+                    <div class="signup-form">
+                        <h2 class="form-title">REGISTRATION FORM</h2>
+                        <form method="get" class="register-form" id="reg" action="inxe.htn">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" id="name" name="entry.1847400945"  placeholder="Your Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="entry.707462197" id="email" placeholder="Your Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Phone Number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="tel" name="entry.535897837" id="phone" placeholder="Phone Number" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pay"><i class="zmdi zmdi-money"></i> </label> 
+                                <select id="pay" name="entry.1622645445" required>
+                                    <option  value="bkash">Select Payment Method ▼</option>
+                                    <option  value="bkash">Bkash</option>
+                                    <option  value="rocket">Rocket</option>
+                                    <option  value="nagad">Nagad</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Number"><i class="zmdi zmdi-phone"></i></label>
+                                <input type="tel" name="entry.57688165" id="phone" placeholder="Bkash/Nagad/Rocket Number" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="trnx"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" id="trnx" name="entry.1847400945"  placeholder="Transaction ID" required/>
+                            </div>
+                            <input type="text" id="ref" name="entry.187579107" style="display:none;">
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="submit" value="SUBMIT" class="form-submit">
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-</body>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
