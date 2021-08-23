@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'century';
+    src: url(fonts/GOTHIC.TTF);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-Bold.ttf);
+}
+.hi1{
+    font-family: "roboto";
+    font-size: 4.5em;
+    font-weight:bolder;
+    color: rgba(0, 209, 199, 0.945);
+    margin: 0px;
+    padding:0px;
+    line-height: 0%;
+}
+.hi2{
+    font-family: "roboto";
+    font-size: 3.3em;
+    font: bolder;
+    color: rgb(0, 86, 92);
+}
+.hi3{
+    font-family: "century";
+    font-size: 1.3em;
+    font: bolder;
+    color: rgb(0, 86, 92);
+}
