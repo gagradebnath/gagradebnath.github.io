@@ -121,6 +121,10 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+.achievement-icon .bi {
+  color: #343a40 !important;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
