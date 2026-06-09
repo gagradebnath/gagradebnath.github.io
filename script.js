@@ -62,6 +62,15 @@ const SKILLS = [
         label: 'Node.js' },
     { icon: 'images-removebg-preview.png', 
         label: 'Solidity' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1920px-Figma-logo.svg.png', 
+        label: 'Figma' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/960px-Adobe_Illustrator_CC_icon.svg.png', 
+        label: 'Illustrator' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png', 
+        label: 'Photoshop' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/500px-Adobe_Premiere_Pro_CC_icon.svg.png', 
+        label: 'Premiere Pro' }
+        
   ];
 
 const AWARDS = [
@@ -87,14 +96,14 @@ const EXPERIENCES = [
     role: 'Chemistry Research Associate',
     company: 'Utkorsho : উৎকর্ষ',
     years: 'Nov 2023 – 2025',
-    desc: 'Conducted chemistry-related research support work and contributed to academic content development in a hybrid working environment in Bangladesh.'
+    desc: 'Led R&D initiatives and delivered instruction in the Chemistry department· Developed experimental frameworks and produced structured research documentation'
   },
   {
     icon: '💡',
     role: 'Teacher | Materials Developer',
     company: 'UDVASH-উদ্ভাস',
     years: 'Aug 2023 – 2024',
-    desc: 'Taught students and developed academic learning materials, focusing on structured exam preparation and concept clarity in science subjects.'
+    desc: 'Co-authored mathematics books and study materials for HSC-level students· Collaborated with subject-matter experts to ensure accuracy and pedagogical quality'
   },
   {
     icon: '🎓',
@@ -133,7 +142,8 @@ const PROJECTS = [
     tag: 'Python, JavaScript, LLM APIs',
     bg: '#2b2e28',
     bg2: '#333a2e',
-    description: 'Free, lightweight open-source tool to maintain all stages of the prompt lifecycle. Simplifies LLMOps, supporting workflows from prompt evaluation to complex agent evaluation, and streamlines development, evaluation, and deployment of LLM prompts.'
+    description: 'Free, lightweight open-source tool to maintain all stages of the prompt lifecycle. Simplifies LLMOps, supporting workflows from prompt evaluation to complex agent evaluation, and streamlines development, evaluation, and deployment of LLM prompts.',
+    link: 'https://github.com/cognix-labs/promptlab'
   },
 
   {
@@ -142,6 +152,7 @@ const PROJECTS = [
     bg: '#28282e',
     bg2: '#2e2e3a',
     description: 'AI-powered personal finance system with budgeting tools and fraud detection engine. Integrated blockchain transaction integrity and explainable AI features in a full-stack Next.js and Node/Express application.'
+  ,link:'https://github.com/gagradebnath/FinTech'
   },
 
   {
@@ -150,7 +161,8 @@ const PROJECTS = [
     bg: '#2e2828',
     bg2: '#3a2e2e',
     description: 'Decentralized system for transparent and secure transactions built for competitive Olympiads. Implements smart contracts, on-chain verification, and a lightweight JavaScript frontend. Awarded Best Prototype at Blockchain Olympiad Bangladesh 2023.'
-  },
+  
+  ,link:'https://github.com/gagradebnath/SolChain'},
 
   {
     label: 'Uddokta AI - Business Intelligence Dashboard',
@@ -158,6 +170,7 @@ const PROJECTS = [
     bg: '#28282c',
     bg2: '#32283a',
     description: 'AI-powered business intelligence dashboard for entrepreneurs and SMEs. Enables natural-language querying for insights with visual analytics and AI-driven recommendations.'
+    , link:'https://github.com/gagradebnath/Uddokta-AI'
   },
 
   {
@@ -166,6 +179,7 @@ const PROJECTS = [
     bg: '#2b2e28',
     bg2: '#333a2e',
     description: 'Urban Heat Island analysis for Dhaka using environmental sensor data. Applies computational methods and GIS-based spatial analysis to model thermal patterns and surface temperature distribution.'
+  ,link:'https://github.com/gagradebnath/UHI_DHK'
   },
 
   {
@@ -174,6 +188,7 @@ const PROJECTS = [
     bg: '#28282e',
     bg2: '#2e2e3a',
     description: 'AI-powered travel planning platform offering personalized itineraries, destination insights, and smart travel recommendations based on user preferences and AI analysis.'
+  ,link:'https://github.com/gagradebnath/TravelAdviser'
   }
 ];
 
