@@ -48,12 +48,21 @@ const SKILLS = [
         label: 'TS' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png', 
         label: 'React' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png', label: 'SQL' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', label: 'Linux' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/1280px-Docker-svgrepo-com.svg.png', label: 'Docker' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Icon_AI_brain_blueshaded.svg/1280px-Icon_AI_brain_blueshaded.svg.png', label: 'ML/AI' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Research_or_Magnifying_Glass_Flat_Icon_Vector.svg/960px-Research_or_Magnifying_Glass_Flat_Icon_Vector.svg.png?_=20220831032616', label: 'Research' },
-];
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png', 
+      label: 'SQL' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', 
+      label: 'Linux' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/1280px-Docker-svgrepo-com.svg.png', 
+      label: 'Docker' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Icon_AI_brain_blueshaded.svg/1280px-Icon_AI_brain_blueshaded.svg.png', 
+      label: 'ML/AI' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Research_or_Magnifying_Glass_Flat_Icon_Vector.svg/960px-Research_or_Magnifying_Glass_Flat_Icon_Vector.svg.png?_=20220831032616', 
+      label: 'Research' },
+    { icon: 'development-removebg-preview.png', 
+        label: 'Node.js' },
+    { icon: 'images-removebg-preview.png', 
+        label: 'Solidity' },
+  ];
 
 const AWARDS = [
   { icon: '🏆', text: 'Gold Award — Bangladesh Blockchain Olympiad, 2025' },
