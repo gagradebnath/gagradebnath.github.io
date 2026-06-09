@@ -312,7 +312,7 @@ document.getElementById('awards-list').innerHTML = AWARDS.map(a => `
   <div class="award-item reveal lift
               bg-surface2 border border-border rounded-lg h-10">
     <span class="award-icon">${a.icon}</span>
-    <span style="font-size:0.7rem;color:#e8e2d9;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${a.text}</span>
+    <span style="font-size:0.7rem;color:#e8e2d9;font-weight:600;white-space:wrap;overflow:hidden;text-overflow:ellipsis;">${a.text}</span>
   </div>`).join('');
 
 
