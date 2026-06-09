@@ -18,6 +18,7 @@ tailwind.config = {
         mono:    ['"Space Mono"', 'monospace'],
         hi:      ['"Bubbler One"', 'sans-serif'],  
         hubot:   ['"Hubot Sans"','sans'],
+        iAm:      ['"Elms Sans"', 'sans-serif'],
       },
       animation: {
         'fade-up':   'fadeUp 0.6s ease both',
