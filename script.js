@@ -50,8 +50,6 @@ const SKILLS = [
         label: 'React' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png', 
       label: 'SQL' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', 
-      label: 'Linux' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/1280px-Docker-svgrepo-com.svg.png', 
       label: 'Docker' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Icon_AI_brain_blueshaded.svg/1280px-Icon_AI_brain_blueshaded.svg.png', 
@@ -69,7 +67,9 @@ const SKILLS = [
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png', 
         label: 'Photoshop' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/500px-Adobe_Premiere_Pro_CC_icon.svg.png', 
-        label: 'Premiere Pro' }
+        label: 'Premiere Pro' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', 
+      label: 'Linux' }
         
   ];
 
