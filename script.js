@@ -336,28 +336,40 @@ document.getElementById('experiences').innerHTML = EXPERIENCES.map(e => `
 
 
 /* ── Projects ── */
+/* ── Projects ── */
 document.getElementById('projects-grid').innerHTML = PROJECTS.map((p, i) => `
-  <div class="project-card reveal flex "
+  <div class="project-card reveal flex"
        onclick="toggleProject(this)"
        style="background:linear-gradient(135deg,${p.bg},${p.bg2});">
 
     <div class="overlay"></div>
 
     <div class="card-body">
+      
       <div class="card-label">${p.label}</div>
-      <span class="card-tag">${p.tag}</span>
+
+      <!-- Tags -->
+      <div class="card-tags">
+        ${(p.tag || "")
+          .split(",")
+          .map(t => `<span class="card-tag mx-1">${t.trim()}</span>`)
+          .join("")}
+      </div>
 
       <!-- Hidden expandable content -->
       <div class="card-description">
         <p>${p.description || "No description added yet."}</p>
-        <button class="bg-amber-500 hover:bg-amber-600  py-1 px-3 rounded-md text-sm font-bold">
-          <a href="${p.link}" target="_blank" rel="noopener noreferrer">Learn More</a>
+
+        <button class="bg-amber-500 hover:bg-amber-600 py-1 px-3 rounded-md text-sm font-bold">
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer">
+            Learn More
+          </a>
         </button>
       </div>
+
     </div>
   </div>
 `).join('');
-
 
 function toggleProject(card) {
   card.classList.toggle("active");
