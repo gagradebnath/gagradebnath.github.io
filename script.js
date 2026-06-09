@@ -66,10 +66,55 @@ const AWARDS = [
 ];
 
 const EXPERIENCES = [
-  { icon: '🏢', role: 'Role',    company: 'Company', years: '2025–2026', desc: 'Short description of what you did and what impact it had.' },
-  { icon: '🔬', role: 'Role',    company: 'Company', years: '2024–2025', desc: 'Short description of what you did and what impact it had.' },
-  { icon: '💡', role: 'Role',    company: 'Company', years: '2023–2024', desc: 'Short description of what you did and what impact it had.' },
-  { icon: '🚀', role: 'Role',    company: 'Company', years: '2022–2023', desc: 'Short description of what you did and what impact it had.' },
+  {
+    icon: '🏢',
+    role: 'Junior Software Engineer',
+    company: 'ILM AI LTD',
+    years: 'Jun 2026 – Present',
+    desc: 'Working as a part-time software engineer contributing to AI-driven product development and backend/frontend feature implementation in a remote UK-based team.'
+  },
+  {
+    icon: '🔬',
+    role: 'Chemistry Research Associate',
+    company: 'Utkorsho : উৎকর্ষ',
+    years: 'Nov 2023 – 2025',
+    desc: 'Conducted chemistry-related research support work and contributed to academic content development in a hybrid working environment in Bangladesh.'
+  },
+  {
+    icon: '💡',
+    role: 'Teacher | Materials Developer',
+    company: 'UDVASH-উদ্ভাস',
+    years: 'Aug 2023 – 2024',
+    desc: 'Taught students and developed academic learning materials, focusing on structured exam preparation and concept clarity in science subjects.'
+  },
+  {
+    icon: '🎓',
+    role: 'Representative',
+    company: "Cadets' Academic Forum",
+    years: 'May 2020 – Dec 2022',
+    desc: 'Represented the organization in academic coordination activities and supported event planning and student engagement initiatives.'
+  },
+  {
+    icon: '🏆',
+    role: 'Secretary General',
+    company: 'Youth Talents',
+    years: 'Apr 2020 – 2022',
+    desc: 'Led organizational activities, managed teams, and coordinated youth-focused programs to develop leadership and communication initiatives.'
+  },
+  {
+    icon: '✍️',
+    role: 'Creative Director',
+    company: 'Writers Lawn',
+    years: 'May 2020 – Dec 2020',
+    desc: 'Directed creative content planning, managed writing teams, and contributed to editorial and publication workflows.'
+  },
+  {
+    icon: '🌍',
+    role: 'Youth Ambassador',
+    company: 'Futuristic Diplomats Model United Nations',
+    years: 'Jun 2020',
+    desc: 'Participated as a youth ambassador in MUN activities, engaging in diplomacy simulations and global issue discussions.'
+  }
 ];
 
 // grad: two Tailwind bg colours for the card background gradient
