@@ -337,7 +337,7 @@ document.getElementById('experiences').innerHTML = EXPERIENCES.map(e => `
 
 /* ── Projects ── */
 document.getElementById('projects-grid').innerHTML = PROJECTS.map((p, i) => `
-  <div class="project-card reveal"
+  <div class="project-card reveal flex "
        onclick="toggleProject(this)"
        style="background:linear-gradient(135deg,${p.bg},${p.bg2});">
 
