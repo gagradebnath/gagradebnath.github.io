@@ -29,9 +29,9 @@ const EDUCATION = [
 const LANGS = [
   { name: 'English', level: 11 },
   { name: 'Bangla',  level: 11 },
-  { name: 'Garo',    level:  9 },
-  { name: 'Hindi',   level:  7 },
-  { name: 'French',  level:  4 },
+  { name: 'Garo',    level:  11 },
+  { name: 'Hindi',   level:  9 },
+  { name: 'French',  level:  5 },
 ];
 
 // Use emoji or inline SVG for icon
@@ -119,10 +119,53 @@ const EXPERIENCES = [
 
 // grad: two Tailwind bg colours for the card background gradient
 const PROJECTS = [
-  { label: 'Project Name', tag: 'C++',      bg: '#2b2e28', bg2: '#333a2e' },
-  { label: 'Project Name', tag: 'Python',   bg: '#28282e', bg2: '#2e2e3a' },
-  { label: 'Project Name', tag: 'Research', bg: '#2e2828', bg2: '#3a2e2e' },
-  { label: 'Project Name', tag: 'Web',      bg: '#28282c', bg2: '#32283a' },
+  {
+    label: 'PromptLab - LLM Prompt Lifecycle Management',
+    tag: 'Python, JavaScript, LLM APIs',
+    bg: '#2b2e28',
+    bg2: '#333a2e',
+    description: 'Free, lightweight open-source tool to maintain all stages of the prompt lifecycle. Simplifies LLMOps, supporting workflows from prompt evaluation to complex agent evaluation, and streamlines development, evaluation, and deployment of LLM prompts.'
+  },
+
+  {
+    label: 'FinGuardAI - AI-Powered Personal Finance System',
+    tag: 'Next.js, Node.js, PostgreSQL, AI',
+    bg: '#28282e',
+    bg2: '#2e2e3a',
+    description: 'AI-powered personal finance system with budgeting tools and fraud detection engine. Integrated blockchain transaction integrity and explainable AI features in a full-stack Next.js and Node/Express application.'
+  },
+
+  {
+    label: 'SolChain - Decentralized Transaction System',
+    tag: 'Solidity, Web3.js, JavaScript',
+    bg: '#2e2828',
+    bg2: '#3a2e2e',
+    description: 'Decentralized system for transparent and secure transactions built for competitive Olympiads. Implements smart contracts, on-chain verification, and a lightweight JavaScript frontend. Awarded Best Prototype at Blockchain Olympiad Bangladesh 2023.'
+  },
+
+  {
+    label: 'Uddokta AI - Business Intelligence Dashboard',
+    tag: 'Next.js, Python, AI/LLM APIs',
+    bg: '#28282c',
+    bg2: '#32283a',
+    description: 'AI-powered business intelligence dashboard for entrepreneurs and SMEs. Enables natural-language querying for insights with visual analytics and AI-driven recommendations.'
+  },
+
+  {
+    label: 'UHI DHK - Urban Heat Island Analysis',
+    tag: 'Python, GIS, Environmental APIs',
+    bg: '#2b2e28',
+    bg2: '#333a2e',
+    description: 'Urban Heat Island analysis for Dhaka using environmental sensor data. Applies computational methods and GIS-based spatial analysis to model thermal patterns and surface temperature distribution.'
+  },
+
+  {
+    label: 'TravelAdviser - AI-Powered Travel Planning Platform',
+    tag: 'C, Python, AI',
+    bg: '#28282e',
+    bg2: '#2e2e3a',
+    description: 'AI-powered travel planning platform offering personalized itineraries, destination insights, and smart travel recommendations based on user preferences and AI analysis.'
+  }
 ];
 
 // Social links — set href to your real URLs
@@ -293,15 +336,32 @@ document.getElementById('experiences').innerHTML = EXPERIENCES.map(e => `
 
 
 /* ── Projects ── */
-document.getElementById('projects-grid').innerHTML = PROJECTS.map(p => `
+document.getElementById('projects-grid').innerHTML = PROJECTS.map((p, i) => `
   <div class="project-card reveal"
+       onclick="toggleProject(this)"
        style="background:linear-gradient(135deg,${p.bg},${p.bg2});">
+
     <div class="overlay"></div>
+
     <div class="card-body">
       <div class="card-label">${p.label}</div>
       <span class="card-tag">${p.tag}</span>
+
+      <!-- Hidden expandable content -->
+      <div class="card-description">
+        <p>${p.description || "No description added yet."}</p>
+        <button class="bg-amber-500 hover:bg-amber-600  py-1 px-3 rounded-md text-sm font-bold">
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer">Learn More</a>
+        </button>
+      </div>
     </div>
-  </div>`).join('');
+  </div>
+`).join('');
+
+
+function toggleProject(card) {
+  card.classList.toggle("active");
+}
 
 
 /* ═══════════════════════════════════════════════════════════
