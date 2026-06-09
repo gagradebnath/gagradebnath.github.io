@@ -1,17 +1,52 @@
-  body { font-family: 'Nunito', sans-serif; background: #1a1714; color: #e8e2d9; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #1a1714;
+  color: #e8e2d9;
+}
 
-  /* Language dots */
-  .dot { width:8px; height:8px; border-radius:50%; background:#3a3733; display:inline-block; }
-  .dot.on { background:#e8850a; }
+/* Language dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3a3733;
+  display: inline-block;
+}
 
-  /* Scroll reveal */
-  .reveal { opacity:0; transform:translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
-  .reveal.visible { opacity:1; transform:translateY(0); }
+.dot.on {
+  background: #e8850a;
+}
 
-  /* Hover lift */
-  .lift { transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
-  .lift:hover { transform: translateY(-3px); border-color: #e8850a !important; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
 
-  /* Exp card hover */
-  .exp-hover { transition: transform 0.2s ease, border-color 0.2s ease; }
-  .exp-hover:hover { transform: translateX(4px); border-color: #e8850a !important; }
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover lift */
+.lift {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lift:hover {
+  transform: translateY(-3px);
+  border-color: #e8850a !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Experience card hover */
+.exp-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-hover:hover {
+  transform: translateX(4px);
+  border-color: #e8850a !important;
+}
+
