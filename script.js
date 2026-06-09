@@ -67,7 +67,7 @@ const SKILLS = [
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/960px-Adobe_Photoshop_CC_icon.svg.png', 
         label: 'Photoshop' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/500px-Adobe_Premiere_Pro_CC_icon.svg.png', 
-        label: 'Premiere Pro' },
+        label: 'Pr Pro' },
     { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', 
       label: 'Linux' }
         
