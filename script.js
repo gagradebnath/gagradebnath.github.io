@@ -36,23 +36,33 @@ const LANGS = [
 
 // Use emoji or inline SVG for icon
 const SKILLS = [
-  { icon: '🐍', label: 'Python'   },
-  { icon: '⚙️', label: 'C/C++'    },
-  { icon: '☕', label: 'Java'     },
-  { icon: '🟨', label: 'JS/TS'    },
-  { icon: '⚛️', label: 'React'    },
-  { icon: '🗄️', label: 'SQL'      },
-  { icon: '🐧', label: 'Linux'    },
-  { icon: '🐳', label: 'Docker'   },
-  { icon: '🤖', label: 'ML/AI'    },
-  { icon: '🔬', label: 'Research' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/3840px-Python-logo-notext.svg.png', 
+        label: 'Python' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png', 
+        label: 'C/C++' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/250px-Java_programming_language_logo.svg.png', 
+        label: 'Java' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/1920px-Javascript-shield.svg.png', 
+        label: 'JS' },,
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1280px-Typescript_logo_2020.svg.png', 
+        label: 'TS' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png', 
+        label: 'React' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1280px-Postgresql_elephant.svg.png', label: 'SQL' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/500px-Tux.svg.png', label: 'Linux' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/1280px-Docker-svgrepo-com.svg.png', label: 'Docker' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Icon_AI_brain_blueshaded.svg/1280px-Icon_AI_brain_blueshaded.svg.png', label: 'ML/AI' },
+    { icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Research_or_Magnifying_Glass_Flat_Icon_Vector.svg/960px-Research_or_Magnifying_Glass_Flat_Icon_Vector.svg.png?_=20220831032616', label: 'Research' },
 ];
 
 const AWARDS = [
-  { icon: '🏆', text: 'Award Name — Organization, Year' },
-  { icon: '🥇', text: 'Award Name — Organization, Year' },
-  { icon: '🎖️', text: 'Award Name — Organization, Year' },
-  { icon: '🌟', text: 'Award Name — Organization, Year' },
+  { icon: '🏆', text: 'Gold Award — Bangladesh Blockchain Olympiad, 2025' },
+
+  { icon: '🥇', text: 'National Winner (Best Prototype Award) — Bangladesh Blockchain Olympiad, 2023' },
+
+  { icon: '🎖️', text: 'Silver Honour — International Astronomy and Astrophysics Competition, 2021' },
+
+  { icon: '🌟', text: 'Silver Medal — International Owlypia, 2021' },
 ];
 
 const EXPERIENCES = [
@@ -203,9 +213,9 @@ buildSocials('social-desktop', '22px', '38px');
 
 /* ── Skills ── */
 document.getElementById('skills-grid').innerHTML = SKILLS.map(s => `
-  <div class="skill-tile reveal lift">
-    <span class="skill-icon">${s.icon}</span>
-    <span>${s.label}</span>
+  <div class="skill-tile reveal lift h-15 pt-2.5">
+    <span class="skill-icon md:mb-3"><img class="h-6 md:h-20" src="${s.icon}" alt="${s.label}"></span>
+    <span class="skill-label">${s.label}</span>
   </div>`).join('');
 
 

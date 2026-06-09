@@ -172,6 +172,16 @@ nav {
   }
 }
 
+.skill-label{
+    font-size: .6rem;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .skill-label{
+        font-size: 1 rem;
+    }
+}
 /* ═══════════════════════════════════════════
    AWARD ITEMS
 ═══════════════════════════════════════════ */
