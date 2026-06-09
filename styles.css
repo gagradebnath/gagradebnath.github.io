@@ -1,23 +1,37 @@
+/* ═══════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   background: #1a1714;
   color: #e8e2d9;
+  margin: 0;
+  padding: 0;
 }
 
-/* Language dots */
+/* ═══════════════════════════════════════════
+   LANGUAGE DOTS
+═══════════════════════════════════════════ */
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #3a3733;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .dot.on {
   background: #e8850a;
 }
 
-/* Scroll reveal */
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -29,7 +43,9 @@ body {
   transform: translateY(0);
 }
 
-/* Hover lift */
+/* ═══════════════════════════════════════════
+   HOVER LIFT  (cards, skill tiles, awards)
+═══════════════════════════════════════════ */
 .lift {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -37,10 +53,12 @@ body {
 .lift:hover {
   transform: translateY(-3px);
   border-color: #e8850a !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* Experience card hover */
+/* ═══════════════════════════════════════════
+   EXPERIENCE CARD HOVER  (slide-right)
+═══════════════════════════════════════════ */
 .exp-hover {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -50,3 +68,267 @@ body {
   border-color: #e8850a !important;
 }
 
+/* ═══════════════════════════════════════════
+   EDUCATION TABLE  — reset browser defaults
+═══════════════════════════════════════════ */
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.education-table th,
+.education-table td {
+  padding: 0;           /* tailwind classes handle padding */
+  text-align: left;
+  font-size: 0.72rem;
+  color: #e8e2d9;
+}
+
+.education-table thead th {
+  color: #8a8480;
+  font-weight: 600;
+  font-size: 0.65rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #3a3733;
+}
+
+.education-table tbody tr {
+  border-bottom: 1px solid rgba(58, 55, 51, 0.55);
+}
+
+.education-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.education-table tbody td {
+  padding: 6px 4px;
+}
+
+/* GPA column always right-aligned */
+.education-table td:last-child,
+.education-table th:last-child {
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════ */
+nav {
+  /* border-bottom colour comes from Tailwind border-border */
+}
+
+/* ═══════════════════════════════════════════
+   PROFILE PHOTO  — object-position helper
+═══════════════════════════════════════════ */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: inherit;
+}
+
+/* ═══════════════════════════════════════════
+   SKILL TILES
+═══════════════════════════════════════════ */
+.skill-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  aspect-ratio: 1 / 1;
+  background: #2e2b28;
+  border: 1px solid #3a3733;
+  border-radius: 10px;
+  color: #8a8480;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 4px;
+  cursor: default;
+  transition: transform 0.2s ease, border-color 0.2s ease,
+              color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tile:hover {
+  transform: translateY(-3px);
+  border-color: #e8850a;
+  color: #e8e2d9;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.skill-tile .skill-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .skill-tile {
+    font-size: 0.68rem;
+  }
+  .skill-tile .skill-icon {
+    font-size: 1.75rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   AWARD ITEMS
+═══════════════════════════════════════════ */
+.award-item {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #e8e2d9;
+  gap: 8px;
+}
+
+.award-item .award-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   PROJECT CARDS
+═══════════════════════════════════════════ */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #3a3733;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #e8850a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,23,20,0.92) 0%, transparent 55%);
+  z-index: 1;
+}
+
+.project-card .card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 12px;
+  z-index: 2;
+}
+
+.project-card .card-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #e8e2d9;
+}
+
+.project-card .card-tag {
+  display: inline-block;
+  font-size: 0.58rem;
+  background: #e8850a;
+  color: #fff;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .project-card .card-label { font-size: 0.82rem; }
+  .project-card .card-tag   { font-size: 0.62rem; }
+}
+
+/* ═══════════════════════════════════════════
+   SOCIAL ICON BUTTONS
+═══════════════════════════════════════════ */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* ═══════════════════════════════════════════
+   SECTION HEADINGS  (font-display via Tailwind)
+═══════════════════════════════════════════ */
+.section-title {
+font-family: 'Hubot Sans';
+font-style: normal;
+font-weight: 500;
+font-size: .9rem;
+/* or 294% */
+letter-spacing: 0.05em;
+
+color: #FF8D28;
+
+
+}
+
+@media (min-width: 768px) {
+  .section-title { font-size: 0.95rem; }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE HELPERS
+═══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .lift,
+  .exp-hover,
+  .skill-tile,
+  .project-card,
+  .social-btn {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   Hero
+═══════════════════════════════════════════ */
+.hi{
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+.hi{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+}
+
+
+.salem{
+    font-family: 'hubot sans';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e8850a;
+}
+
+
+@media (min-width: 768px) {
+.salem{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+}
